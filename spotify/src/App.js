@@ -4,10 +4,12 @@ import Register from './components/Register';
 import PrivateRoute from "./components/PrivateRoute.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {Dashboard} from "./components/Dashboard"
+import NavMenu from './components/NavMenu';
 
 function App() {
   return (
     <Router>
+      <NavMenu />
       <div className="App">
         <Switch>
           <PrivateRoute exact path = "/private" component={Dashboard}/>
