@@ -43,6 +43,7 @@ export default function SignUp() {
       axios.post("", newTeamMember)
           .then(response =>{
               console.log(response)
+              props.history.push('/login')
 
           })
           .catch(err => {
