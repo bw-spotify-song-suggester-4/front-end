@@ -7,11 +7,13 @@ import {
   DELETE_FAVORITE_START
 } from "../actions/";
 
-// TODO Need an initialState for this reducer
+const initialState = {
+  favorites: [],
+  isFetching: false,
+  error: ""
+};
 
-const initialState = {};
-
-export const FavoriteReducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   console.log("reducer is reducing", action);
   switch (action.type) {
     case CREATE_FAVORITE_START:
