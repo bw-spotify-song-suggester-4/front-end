@@ -1,4 +1,4 @@
-import axiosWithAuth from "../utils";
+import axiosWithAuth from "../utils/axiosWithAuth";
 
 // Login State
 export const LOGIN_START = "LOGIN_START";
