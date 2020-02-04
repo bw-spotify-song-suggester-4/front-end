@@ -1,24 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
-export default function SignUp() {
-  const [addTeamMembers, setAddTeamMembers] = React.useState([{}]);
-
-  return (
-    <div className="register">
-      <h1>Sign Up Below!</h1>
-
-      <NewAddTeamMemberForm
-        addTeamMembers={addTeamMembers}
-        setAddTeamMembers={setAddTeamMembers}
-      />
-
-    </div>
-  );
-}
-
-function NewAddTeamMemberForm(props) {
-  const [newTeamMember, setNewTeamMember] = React.useState({
+function Register(props) {
+  const [newTeamMember, setNewTeamMember] = useState({
     name: "",
     email: "",
     password: ""
@@ -33,7 +17,7 @@ function NewAddTeamMemberForm(props) {
       )
       .then(response => {
         console.log(response, props);
-        props.history.push('/login');
+        props.history.push("/login");
       })
       .catch(err => {
         console.log(err);
@@ -48,42 +32,47 @@ function NewAddTeamMemberForm(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="inputContainer">
-        <input
-          type="text"
-          name="name"
-          placeholder="enter your first and last names"
-          onChange={handleChange}
-          value={newTeamMember.name}
-        />
-      </div>
+    <div>
+      <h1>Sign Up Below!</h1>
 
-      <div className="inputContainer">
-        <input
-          type="text"
-          name="email"
-          placeholder="someone@example.com"
-          onChange={handleChange}
-          value={newTeamMember.email}
-        />
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="inputContainer">
+          <input
+            type="text"
+            name="name"
+            placeholder="enter your first and last names"
+            required
+            onChange={handleChange}
+            value={newTeamMember.name}
+          />
+        </div>
 
-      <div className="inputContainer">
-        <input
-          type="password"
-          name="password"
-          placeholder="enter your password"
-          onChange={handleChange}
-          value={newTeamMember.password}
-        />
-      </div>
+        <div className="inputContainer">
+          <input
+            type="text"
+            name="email"
+            placeholder="someone@example.com"
+            required
+            onChange={handleChange}
+            value={newTeamMember.email}
+          />
+        </div>
 
-      {props.isEditing ? (
-        <button type="submit">Edit team member</button>
-      ) : (
+        <div className="inputContainer">
+          <input
+            type="password"
+            name="password"
+            placeholder="enter your password"
+            onChange={handleChange}
+            required
+            value={newTeamMember.password}
+          />
+        </div>
+
         <button type="submit">Sign Up!</button>
-      )}
-    </form>
+      </form>
+    </div>
   );
-      }
+}
+
+export default Register;
