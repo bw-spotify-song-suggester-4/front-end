@@ -12,7 +12,7 @@ function App() {
       <NavMenu />
       <div className="App">
         <Switch>
-          <PrivateRoute exact path = "/private" component={Dashboard}/>
+          <PrivateRoute exact path = "/dashboard" component={Dashboard}/>
           <Route path= "/login" component={Login} />
           <Route path= "/" component={Register} />
         </Switch>

@@ -8,12 +8,12 @@ import {
 } from "../actions/";
 
 const initialState = {
-    favorites: [],
-    isFetching: false,
-    error: ''
-}
+  favorites: [],
+  isFetching: false,
+  error: ""
+};
 
-export const FavoriteReducer = (state = initialState, action) => {
+export const favoriteReducer = (state = initialState, action) => {
     console.log('reducer is reducing', action );
     switch(action.type){
         case CREATE_FAVORITE_START:
