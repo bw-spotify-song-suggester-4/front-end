@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const Register = props => {
-  console.log (props);
+  console.log(props);
 
   const [user, setUser] = useState({
     name: "",
@@ -10,10 +10,8 @@ const Register = props => {
     password: ""
   });
 
-  
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleSubmit = e => {
+    e.preventDefault();
     axios
       .post("https://fierce-crag-88546.herokuapp.com/accounts/register", user)
       .then(response => {
