@@ -40,7 +40,7 @@ export default function SignUp() {
 
     const handleSubmit = (event) => {
       event.preventDefault()
-      axios.post("", newTeamMember)
+      axios.post("/accounts/register", newTeamMember)
           .then(response =>{
               console.log(response)
               props.history.push('/login')
