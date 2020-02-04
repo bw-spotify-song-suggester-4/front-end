@@ -81,9 +81,9 @@ function NewAddTeamMemberForm(props) {
       </div>
 
       {props.isEditing ? (
-        <button role="submit">Edit team member</button>
+        <button type="submit">Edit team member</button>
       ) : (
-        <button role="submit">Sign Up!</button>
+        <button type="submit">Sign Up!</button>
       )}
     </form>
   );
