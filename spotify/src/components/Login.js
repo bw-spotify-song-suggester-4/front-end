@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const Login = props => {
+  console.log("props", props)
   const [login, setLogin] = useState({
     email: "",
     password: ""

@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 
 export const Dashboard = props => {
   return (
@@ -10,10 +9,5 @@ export const Dashboard = props => {
 };
 
 
-const mapStateToProps = state => {
-  return {
-    state
-  }
-}
 
-export default connect(mapStateToProps, {})(Dashboard);
+
