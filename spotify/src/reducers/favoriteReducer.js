@@ -13,7 +13,7 @@ const initialState = {
     error: ''
 }
 
-export const reducer = (state = initialState, action) => {
+export const FavoriteReducer = (state = initialState, action) => {
     console.log('reducer is reducing', action );
     switch(action.type){
         case CREATE_FAVORITE_START:
