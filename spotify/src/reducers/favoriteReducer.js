@@ -9,6 +9,8 @@ import {
 
 // TODO Need an initialState for this reducer
 
+const initialState = {};
+
 export const FavoriteReducer = (state = initialState, action) => {
   console.log("reducer is reducing", action);
   switch (action.type) {

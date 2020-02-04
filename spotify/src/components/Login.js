@@ -39,7 +39,7 @@ const Login = props => {
         value={login.password}
         onChange={handleInput}
       />
-      <button>Log in</button>
+      <button type="submit">Log in</button>
       <button>Logout</button>
     </form>
   );
