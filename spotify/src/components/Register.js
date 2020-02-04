@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React from "react";
 import axios from 'axios';
 
 export default function SignUp() {
@@ -38,9 +38,9 @@ export default function SignUp() {
       
     })
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event, props) => {
       event.preventDefault()
-      axios.post("/accounts/register", newTeamMember)
+      axios.post("https://fierce-crag-88546.herokuapp.com/accounts/register", newTeamMember)
           .then(response =>{
               console.log(response)
               props.history.push('/login')
