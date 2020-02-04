@@ -1,11 +1,8 @@
-.App {
+/* .App {
   text-align: center;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +32,17 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.register{
+  background-color: red;
+}
+.inputContainer {
+  margin: 0.5rem auto;
+  width: 90%;
+  background-color: red;
+}
+
+* {
+  background-color: red;
 }
