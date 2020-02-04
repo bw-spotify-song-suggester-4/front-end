@@ -13,46 +13,46 @@ const initialState = {
   error: ""
 };
 
-export const FavoriteReducer = (state = initialState, action) => {
-  console.log("reducer is reducing", action);
-  switch (action.type) {
-    case CREATE_FAVORITE_START:
-      return {
-        ...state,
-        isFetching: true,
-        error: null
-      };
-    case CREATE_FAVORITE_SUCCESS:
-      return {
-        ...state,
-        favorites: [...state],
-        error: null
-      };
-    case CREATE_FAVORITE_FAILURE:
-      return {
-        ...state,
-        error: action.payload,
-        favorites: []
-      };
-    case DELETE_FAVORITE_START:
-      return {
-        ...state,
-        isFetching: true,
-        error: null
-      };
-    case DELETE_FAVORITE_SUCCESS:
-      return {
-        ...state,
-        favorites: action.payload,
-        error: null
-      };
-    case DELETE_FAVORITE_FAILURE:
-      return {
-        ...state,
-        error: action.payload,
-        favorites: []
-      };
-    default:
-      return state;
-  }
-};
+export const favoriteReducer = (state = initialState, action) => {
+    console.log('reducer is reducing', action );
+    switch(action.type){
+        case CREATE_FAVORITE_START:
+            return {
+                ...state,
+                isFetching: true,
+                error: null 
+            }
+        case CREATE_FAVORITE_SUCCESS:
+            return {
+                ...state,
+                favorites: [...state],
+                error: null
+            }
+        case CREATE_FAVORITE_FAILURE:
+            return {
+                ...state,
+                error: action.payload,
+                favorites: []
+            }
+        case DELETE_FAVORITE_START:
+            return {
+                    ...state,
+                    isFetching: true,
+                    error: null 
+                }
+            case DELETE_FAVORITE_SUCCESS:
+                return {
+                    ...state,
+                    favorites: action.payload,
+                    error: null
+                }
+            case DELETE_FAVORITE_FAILURE:
+                return {
+                    ...state,
+                    error: action.payload,
+                    favorites: []
+                }
+                default: 
+            return state;
+    }
+}

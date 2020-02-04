@@ -15,11 +15,11 @@ const Login = props => {
   const handleLogin = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/accounts/login", login)
+      .post("https://fierce-crag-88546.herokuapp.com/accounts/login", login)
       .then(res => {
         console.log(res);
         localStorage.setItem("token", res.data.payload);
-        props.history.push("/private");
+        props.history.push("/dashboard");
       })
       .catch(err => console.log(err.message));
   };
