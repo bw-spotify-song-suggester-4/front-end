@@ -5,7 +5,7 @@ export default function SignUp() {
   const [addTeamMembers, setAddTeamMembers] = React.useState([{}]);
 
   return (
-    <div className="App">
+    <div className="register">
       <h1>Sign Up Below!</h1>
 
       <NewAddTeamMemberForm
@@ -13,7 +13,6 @@ export default function SignUp() {
         setAddTeamMembers={setAddTeamMembers}
       />
 
-      <AddTeamMembers addTeamMembers={addTeamMembers} />
     </div>
   );
 }
@@ -80,33 +79,11 @@ function NewAddTeamMemberForm(props) {
         />
       </div>
 
-      {props.isEditing ? (
-        <button role="submit">Edit team member</button>
-      ) : (
+      
+        
+      
         <button role="submit">Sign Up!</button>
-      )}
+      
     </form>
   );
-}
-
-function TeamMember({ member, handleEdit, handleDelete }) {
-  return <div className="team-member"></div>;
-}
-
-function AddTeamMembers(props) {
-  const renderTeamMember = function mapperFn(member) {
-    return (
-      <TeamMember
-        member={member}
-        handleEdit={props.handleEdit}
-        handleDelete={props.handleDelete}
-      />
-    );
-  };
-
-  return (
-    <div className="team-members">
-      {props.addTeamMembers.map(renderTeamMember)}
-    </div>
-  );
-}
+      }

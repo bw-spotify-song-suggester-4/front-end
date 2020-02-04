@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
  
 }
@@ -29,6 +29,18 @@
   color: #61dafb;
 }
 
+.register{
+  background-color: red;
+
+}
+
+
+.inputContainer {
+  margin: 0.5rem auto;
+  width: 90%;
+  background-color: red;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,17 +48,9 @@
   to {
     transform: rotate(360deg);
   }
-} */
-
-.register{
-  background-color: red;
-}
-.inputContainer {
-  margin: 0.5rem auto;
-  width: 90%;
-  background-color: red;
 }
 
-* {
-  background-color: red;
-}
+
+
+
+
