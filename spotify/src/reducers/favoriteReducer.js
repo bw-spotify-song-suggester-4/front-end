@@ -8,10 +8,10 @@ import {
 } from "../actions/";
 
 const initialState = {
-    favorites: [],
-    isFetching: false,
-    error: ''
-}
+  favorites: [],
+  isFetching: false,
+  error: ""
+};
 
 export const favoriteReducer = (state = initialState, action) => {
     console.log('reducer is reducing', action );
