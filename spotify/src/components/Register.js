@@ -32,8 +32,8 @@ function NewAddTeamMemberForm(props) {
         newTeamMember
       )
       .then(response => {
-        console.log(response);
-        props.history.push("/login");
+        console.log(response, props);
+        props.history.push('/login');
       })
       .catch(err => {
         console.log(err);
@@ -79,11 +79,11 @@ function NewAddTeamMemberForm(props) {
         />
       </div>
 
-      
-        
-      
-        <button role="submit">Sign Up!</button>
-      
+      {props.isEditing ? (
+        <button type="submit">Edit team member</button>
+      ) : (
+        <button type="submit">Sign Up!</button>
+      )}
     </form>
   );
       }
