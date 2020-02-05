@@ -9,7 +9,7 @@ body {
   
   /* background-image: url('./components/images/photo-of-woman-wearing-yellow-checkered-skirt-3222238.png') ; */
   /* background-image: url('./components/images/saxophone.jpg'); */
-  background-image: url('./components/images/Piano-background-faded-dark-40-percent.png');
+  background: url('./components/images/Piano-background-faded-dark-40-percent.png') no-repeat center center fixed;
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center;

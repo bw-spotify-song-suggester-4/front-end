@@ -30,6 +30,7 @@ export default function SearchForm(props) {
         <input
           type="text"
           name="title"
+          placeholder="Search"
           value={props.search.title}
           onChange={props.handleSearchChange}
         />

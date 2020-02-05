@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import axiosWithAuth from '../utils/axiosWithAuth'
 import FavoriteCard from './FavoriteCard'
+import {songs} from "./DummyData";
 
 function FavoriteList(){
     const [data, setData] = useState([]);
-    
+    console.log(songs)
         useEffect(() =>{
             axiosWithAuth()
             .get("accounts/favorites")
@@ -17,12 +18,13 @@ function FavoriteList(){
             <div>
              
             
-                {data.map((data)=>{
+                {songs.map((data)=>{
                     return(
-                        <div key={data.song_id}> 
+                        <div id={data.id}> 
                         <FavoriteCard  
-                            name = {data.name}
+                            id={data.id}
                             artist = {data.artist}
+                            title = {data.title}
                         />
                         </div>
                     )}

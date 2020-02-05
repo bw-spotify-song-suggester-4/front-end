@@ -1,23 +1,20 @@
 import React from "react";
-import {connect} from "react-redux";
-import FavoriteList from "./FavoriteList";
+import { connect } from "react-redux";
+import EditPlaylist from "./EditPlaylist";
 
-export const Dashboard = (props) => {
-   const id = props.match.params.id;
-  
-  console.log(props, id)
+export const Dashboard = props => {
+  const id = props.match.params.id;
 
+  console.log(props, id);
 
   return (
-    <div className="dashboard">
-      <h1>This is the Dashboard</h1>
-      
-      <FavoriteList />
-      <div>
-    <h1>Favorite List:</h1>
-  </div>
+    <div>
+      <div className="dashboard">
+        <h1>Welcome to your Dashboard!</h1>
+        <h1>Here is your Favorite List:</h1>
+      </div>
+      <EditPlaylist />
     </div>
-    
   );
 };
 
@@ -28,5 +25,3 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, {})(Dashboard);
-
-

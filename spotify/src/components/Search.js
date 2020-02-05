@@ -6,25 +6,21 @@ const Search = props => {
   const [songResults, setSongResults] = useState([]);
   const [search, setSearch] = useState({
     title: ""
-  
   });
   console.log("props it", props);
-  
-  
 
   const handleSearchChange = event => {
-    setSearch({ 
-     ...search, 
-     [event.target.name]: event.target.value })
-};
+    setSearch({
+      ...search,
+      [event.target.name]: event.target.value
+    });
+  };
 
-  
   if (!songResults) {
     return <h2>...loading</h2>;
   }
-  console.log("songResults", songResults)
+  console.log("songResults", songResults);
   return (
-    
     <main>
       <SearchForm
         songResults={songResults}
@@ -32,15 +28,16 @@ const Search = props => {
         search={search}
         setSongResults={setSongResults}
       />
-      
     </main>
   );
 };
 export default Search;
 
-{/* <SuggestedCard  
+{
+  /* <SuggestedCard  
                             name = {data.name}
                             url= {data.url}
                             description= {data.description}
-                            subscribers= {data.subscribers} */}
-                        // />
+                            subscribers= {data.subscribers} */
+}
+// />
