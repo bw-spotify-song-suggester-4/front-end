@@ -29,7 +29,7 @@ const Login = props => {
       <div>
       <input className="inputContainer"
         type="text"
-        email="email"
+        name="email"
         placeholder="email"
         value={login.email}
         onChange={handleInput}
