@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axiosWithAuth from "../utils/axiosWithAuth";
+import axios from "axios";
 const Login = props => {
   console.log("props", props);
   const [login, setLogin] = useState({
@@ -15,11 +15,11 @@ const Login = props => {
   };
   const handleLogin = e => {
     e.preventDefault();
-    axiosWithAuth()
-      .post("/accounts/login", login)
+    axios
+      .post("https://song-suggester4-backend.herokuapp.com/accounts/login", login)
       .then(res => {
         console.log(res);
-        localStorage.setItem("token", res.data.payload);
+        localStorage.setItem("token", res.data.token);
         props.history.push("/dashboard");
       })
       .catch(err => console.log(err.message));

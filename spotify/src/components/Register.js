@@ -13,7 +13,7 @@ const Register = props => {
   const handleSubmit = e => {
     e.preventDefault();
     axios
-      .post("https://fierce-crag-88546.herokuapp.com/accounts/register", user)
+      .post("https://song-suggester4-backend.herokuapp.com/accounts/register", user)
       .then(response => {
         console.log(response, props);
         props.history.push("/login");
