@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
 const Login = props => {
-  console.log("props", props)
+  console.log("props", props);
   const [login, setLogin] = useState({
     email: "",
     password: ""
@@ -20,29 +20,31 @@ const Login = props => {
       .then(res => {
         console.log(res);
         localStorage.setItem("token", res.data.payload);
-        props.history.push("/private");
+        props.history.push("/dashboard");
       })
       .catch(err => console.log(err.message));
   };
   return (
     <form onSubmit={handleLogin}>
       <div>
-      <input className="inputContainer"
-        type="text"
-        name="email"
-        placeholder="email"
-        value={login.email}
-        onChange={handleInput}
-      />
+        <input
+          className="inputContainer"
+          type="text"
+          name="email"
+          placeholder="email"
+          value={login.email}
+          onChange={handleInput}
+        />
       </div>
       <div>
-      <input className="inputContainer"
-        type="password"
-        name="password"
-        placeholder="password"
-        value={login.password}
-        onChange={handleInput}
-      />
+        <input
+          className="inputContainer"
+          type="password"
+          name="password"
+          placeholder="password"
+          value={login.password}
+          onChange={handleInput}
+        />
       </div>
       <button type="submit">Log in</button>
       <button>Logout</button>

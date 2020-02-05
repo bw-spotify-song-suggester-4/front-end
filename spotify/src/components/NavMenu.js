@@ -13,7 +13,7 @@ const NavMenu = props => {
     // We're logged in
     return (
       <header className="header">
-        <NavLink to="/" className="logo">
+        <NavLink to="/dashboard" className="logo">
           Symphinity
         </NavLink>
         <label className="menu-icon" htmlFor="menu-btn">
@@ -21,8 +21,9 @@ const NavMenu = props => {
         </label>
         <ul className="menu">
           <li>
-            <NavLink to="/review">Review Stories</NavLink>
-          </li>
+            <NavLink to="/">Home</NavLink>
+          </li> 
+          {/* TODO Need to get endpoint to Marketing page */}
           <li>
             <Link to="/" onClick={logOut}>
               Logout
