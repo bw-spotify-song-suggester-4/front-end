@@ -37,10 +37,11 @@ const Register = props => {
 
       <form onSubmit={handleSubmit}>
         <div> 
+          <h5>Enter your name here: </h5>
           <input className='inputContainer'
             type="text"
             name="name"
-            placeholder="enter your first and last names"
+            
             required
             onChange={handleChange}
             value={user.name}
@@ -48,10 +49,11 @@ const Register = props => {
         </div>
 
         <div>
+        <h5>Enter your email: </h5>
           <input className='inputContainer'
             type="text"
             name="email"
-            placeholder="someone@example.com"
+            
             required
             onChange={handleChange}
             value={user.email}
@@ -59,10 +61,11 @@ const Register = props => {
         </div>
 
         <div >
+        <h5>Enter your password: </h5>
           <input className='inputContainer'
             type="password"
             name="password"
-            placeholder="enter your password"
+
             onChange={handleChange}
             required
             value={user.password}

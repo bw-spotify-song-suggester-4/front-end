@@ -69,3 +69,4 @@ export const deleteFavorite = id => dispatch => {
     })
     .catch(error => dispatch({type: DELETE_FAVORITE_FAILURE, payload: error}))
 };
+
