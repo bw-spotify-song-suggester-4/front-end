@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink, withRouter, Link } from "react-router-dom";
 
 // TODO Need to update the NavMenu to reflect the correct endpoints, and routing.
 
@@ -25,9 +25,9 @@ const NavMenu = props => {
             <NavLink to="/review">Review Stories</NavLink>
           </li>
           <li>
-            <a name="blah" className="logout" onClick={logOut}>
+            <Link to="/" onClick={logOut}>
               Logout
-            </a>
+            </Link>
           </li>
         </ul>
       </header>

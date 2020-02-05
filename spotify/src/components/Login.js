@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import axiosWithAuth from "../utils/axiosWithAuth";
+import axios from "axios";
+
 const Login = props => {
+  console.log("props", props)
   const [login, setLogin] = useState({
-    username: "",
+    email: "",
     password: ""
   });
   const handleInput = e => {
@@ -14,25 +16,25 @@ const Login = props => {
   };
   const handleLogin = e => {
     e.preventDefault();
-    axiosWithAuth()
+    axios
       .post("https://fierce-crag-88546.herokuapp.com/accounts/login", login)
       .then(res => {
         console.log(res);
-        localStorage.setItem("token", res.data.payload);
+        localStorage.setItem("token", res.data.token);
         props.history.push("/dashboard");
       })
       .catch(err => console.log(err.message));
   };
   return (
     <form onSubmit={handleLogin}>
-      <div classname="nameContainer">
-      <input
-        type="text"
-        name="username"
-        placeholder="username"
-        value={login.username}
-        onChange={handleInput}
-      />
+      <div className="nameContainer">
+        <input
+          type="text"
+          name="email"
+          placeholder="email"
+          value={login.email}
+          onChange={handleInput}
+        />
       </div>
       <input
         type="password"
