@@ -6,11 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background-image: url('./components/images/photo-of-woman-wearing-yellow-checkered-skirt-3222238.png') ;
+  /* background-image: url('./components/images/photo-of-woman-wearing-yellow-checkered-skirt-3222238.png') ; */
+  /* background-image: url('./components/images/saxophone.jpg'); */
+  background-image: url('./components/images/Piano-background-faded-dark-40-percent.png');
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: auto; 
   background-position: center;
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
 box-sizing: border-box;
   position: relative;
 left: 0%;
@@ -23,3 +25,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+

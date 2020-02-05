@@ -25,6 +25,9 @@ const Login = props => {
       .catch(err => console.log(err.message));
   };
   return (
+    <div className="register">
+      <h1>Welcome</h1>
+      <h3>Login</h3>
     <form onSubmit={handleLogin}>
       <div>
       <input className="inputContainer"
@@ -44,9 +47,10 @@ const Login = props => {
         onChange={handleInput}
       />
       </div>
-      <button type="submit">Log in</button>
-      <button>Logout</button>
+      <button className="buttonOne" type="submit">Log in</button>
+      
     </form>
+    </div>
   );
 };
 export default Login;
