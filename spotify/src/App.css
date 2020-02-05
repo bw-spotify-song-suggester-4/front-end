@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  
- 
+  height: 100%;
+ border: red 1px solid;
 }
 
 
@@ -68,9 +68,53 @@ background: radial-gradient(140.21% 237.58% at 78.43% 139.84%, rgba(239, 1, 159,
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.dashboard{
+  display: table;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 5em;
+  background: linear-gradient(330deg, #e05252 0%,  rgba(239, 1, 159, 0.75) 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 200px;
+  height: 100px;
+  border: red 1px solid;
+  margin-top: 50%
 
+}
 
+.logo{
+  display: table;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 5em;
+  background: linear-gradient(330deg, #e05252 0%,  rgba(239, 1, 159, 0.75) 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 200px;
+}
 
+.nav_bar{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
+.menu{
+  display:flex;
+}
 
-
+.link{
+  list-style: none;
+  padding-left: 4%;
+  padding-top: 5.6%;
+  
+  
+}
+.active{
+  color: rgba(239, 1, 159, 0.75);
+}
+.active:hover{
+  color: #FFFFFF;
+  text-decoration: none;
+}

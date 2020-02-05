@@ -12,32 +12,33 @@ const NavMenu = props => {
   if (localStorage.getItem("token")) {
     // We're logged in
     return (
-      <header className="header">
+      <header className="nav_bar">
       
         <label className="menu-icon" htmlFor="menu-btn">
-          <span className="nav-icon"></span>
+          <div className="logo">
           <h1>Symphinity</h1>
+          </div>
         </label>
         <ul className="menu">
          
           
             
-          <li>
-            <NavLink to="/">Home</NavLink>
+          <li className="link">
+            <NavLink  to="/">Home</NavLink>
           </li> 
-          <li>
-          <NavLink to="/dashboard" className="logo">
+          <li className="link">
+          <NavLink  to="/dashboard" >
           Dashboard
         </NavLink>
-        </li>
-          <li>
-            <NavLink to="/search">Search</NavLink>
+        </li >
+          <li className="link">
+            <NavLink  to="/search">Search</NavLink>
           </li> 
           {/* TODO Need to get endpoint to Marketing page */}
-          <li>
-            <Link to="/" onClick={logOut}>
+          <li className="link">
+            <NavLink  to="/" onClick={logOut}>
               Logout
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </header>

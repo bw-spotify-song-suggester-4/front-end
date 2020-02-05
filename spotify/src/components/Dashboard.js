@@ -1,5 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
+import FavoriteList from "./FavoriteList";
 
 export const Dashboard = (props) => {
    const id = props.match.params.id;
@@ -8,11 +9,15 @@ export const Dashboard = (props) => {
 
 
   return (
-    
-    <div>
+    <div className="dashboard">
       <h1>This is the Dashboard</h1>
       
+      <FavoriteList />
+      <div>
+    <h1>Favorite List:</h1>
+  </div>
     </div>
+    
   );
 };
 

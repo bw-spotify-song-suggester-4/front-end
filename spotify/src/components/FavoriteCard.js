@@ -1,14 +1,21 @@
 import React from "react";
 
-function SuggestedCard(props) {
+function FavoriteCard(props) {
   return (
-    <h1>
-      {props.name}
-      <CardContent>{props.url}</CardContent>
-      <CardContent>{props.description}</CardContent>
-      <CardContent>{props.subscriptions}</CardContent>
-    </Card>
-  );
+    
+      <div>
+        <h1>{props.name}</h1>
+        <h2>{props.track_id}</h2>
+        <h2>{props.artist}</h2>
+        <div>
+        <button>Edit Favorite </button>
+        <button> Delete Favorite </button>
+        </div>
+      </div>
+     
+        
+    
+   );
 }
 
-export default SuggestedCard;
+export default FavoriteCard;
