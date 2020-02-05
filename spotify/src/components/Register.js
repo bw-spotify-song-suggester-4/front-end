@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-function Register(props) {
-  const [newTeamMember, setNewTeamMember] = useState({
+const Register = props => {
+  console.log(props);
+
+  const [user, setUser] = useState({
     name: "",
     email: "",
     password: ""
   });
 
-  const handleSubmit = (event, props) => {
-    event.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault();
     axios
-      .post(
-        "https://fierce-crag-88546.herokuapp.com/accounts/register",
-        newTeamMember
-      )
+      .post("https://fierce-crag-88546.herokuapp.com/accounts/register", user)
       .then(response => {
         console.log(response, props);
         props.history.push("/login");
@@ -25,8 +24,8 @@ function Register(props) {
   };
 
   const handleChange = event => {
-    setNewTeamMember({
-      ...newTeamMember,
+    setUser({
+      ...user,
       [event.target.name]: event.target.value
     });
   };
@@ -44,7 +43,7 @@ function Register(props) {
             placeholder="enter your first and last names"
             required
             onChange={handleChange}
-            value={newTeamMember.name}
+            value={user.name}
           />
         </div>
 
@@ -55,7 +54,7 @@ function Register(props) {
             placeholder="someone@example.com"
             required
             onChange={handleChange}
-            value={newTeamMember.email}
+            value={user.email}
           />
         </div>
 
@@ -66,7 +65,7 @@ function Register(props) {
             placeholder="enter your password"
             onChange={handleChange}
             required
-            value={newTeamMember.password}
+            value={user.password}
           />
         </div>
 
@@ -74,6 +73,6 @@ function Register(props) {
       </form>
     </div>
   );
-}
+};
 
 export default Register;
