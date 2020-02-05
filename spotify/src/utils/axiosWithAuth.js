@@ -5,7 +5,7 @@ const axiosWithAuth = () => {
   const token = localStorage.getItem('token');
 
   return axios.create({
-    baseURL: '',
+    baseURL: 'https://fierce-crag-88546.herokuapp.com/',
     headers: {
       Authorization: token
     }
