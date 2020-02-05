@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
  
 }
 
@@ -34,21 +35,35 @@
   }
 }
 
-.register{
-  background-color: red;
-
+.register {
+  
+  
 }
 
 
 .inputContainer {
-  margin: 0.5rem auto;
-  width: 90%;
-  background-color: red;
+  border: 1px solid transparent;
+  border-bottom: 1px solid red;
+  background-color: none;
+  background: transparent;
+  opacity: 1;
+  width: 50%;
+  margin-bottom: 2%;
+  
 }
 
-.nameContainer{
-  background-color: red;
+.buttonOne {
+  position: absolute;
+/* left: 13.77%;
+right: 13.77%;
+top: 82.14%;
+bottom: 10.71%; */
+
+background: radial-gradient(140.21% 237.58% at 78.43% 139.84%, rgba(239, 1, 159, 0.75) 0%, rgba(239, 1, 159, 0) 100%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
 
 
 

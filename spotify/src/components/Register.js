@@ -32,12 +32,13 @@ function Register(props) {
   };
 
   return (
-    <div>
-      <h1>Sign Up Below!</h1>
+    <div className="register">
+      <h1>Welcome</h1>
+      <h3>Sign Up</h3>
 
       <form onSubmit={handleSubmit}>
-        <div className="inputContainer">
-          <input
+        <div> 
+          <input className='inputContainer'
             type="text"
             name="name"
             placeholder="enter your first and last names"
@@ -47,8 +48,8 @@ function Register(props) {
           />
         </div>
 
-        <div className="inputContainer">
-          <input
+        <div>
+          <input className='inputContainer'
             type="text"
             name="email"
             placeholder="someone@example.com"
@@ -58,8 +59,8 @@ function Register(props) {
           />
         </div>
 
-        <div className="inputContainer">
-          <input
+        <div >
+          <input className='inputContainer'
             type="password"
             name="password"
             placeholder="enter your password"
@@ -69,7 +70,7 @@ function Register(props) {
           />
         </div>
 
-        <button type="submit">Sign Up!</button>
+        <button className="buttonOne" type="submit">Sign Up!</button>
       </form>
     </div>
   );

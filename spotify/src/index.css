@@ -5,6 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background-image: url('./components/images/photo-of-woman-wearing-yellow-checkered-skirt-3222238.png') ;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  border: 1px solid #000000;
+box-sizing: border-box;
+  position: relative;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
 }
 
 code {
