@@ -57,7 +57,7 @@ const initialState = {
     error: ""
 }
 
-function songReducer(state = initialState, action) {
+export const songReducer = (state = initialState, action) => {
     switch (action.type) {
         case SONG_SEND:
             return {
@@ -92,4 +92,3 @@ function songReducer(state = initialState, action) {
     
 }
 
-export default songReducer;

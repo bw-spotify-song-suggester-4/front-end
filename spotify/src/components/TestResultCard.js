@@ -60,7 +60,7 @@ export function TestResultCard(props) {
   return (
     <Card className={classes.card} flexDirection="row">
       <button onClick={backendSubmit}>Add to Favorites</button>
-      <h1 className={classes.titletext}>Song Title:{props.post.track_name}</h1>
+      <h1 className={classes.titletext}>Song Title:{props.song.track_name}</h1>
       <br />
       <br />
       {props.results.map(result => {
@@ -84,7 +84,7 @@ export function TestResultCard(props) {
 const mapStateToProps = state => {
   console.log(state.loginReducer);
   return {
-    results: state.postReducer.results,
+    results: state.songReducer.results,
     // TODO double check props for this property
     idUser: state.loginReducer.user_id
   };

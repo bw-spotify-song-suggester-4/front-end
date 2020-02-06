@@ -23,7 +23,7 @@ function App() {
           {/* <PrivateRoute exact path="/editfavorites/:id" component={EditFavorites} /> */}
           <Route path="/login" component={Login} />
           <Route path="/" component={Register} />
-
+          
         </Switch>
       </div>
     </Router>
