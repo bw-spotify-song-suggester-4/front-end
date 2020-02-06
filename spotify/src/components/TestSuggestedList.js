@@ -20,11 +20,12 @@ function TestSuggestedList(){
             
                 {data.map((data)=>{
                     return(
-                        <div key={data.song_id}> 
+                        <div key={data.track_id}> 
                         <TestSuggestedCard  
-                            song_id = {data.song_id}
-                            artist= {data.artist}
-                            title= {data.title}
+                            track_id = {data.track_id}
+                            artist_name = {data.artist_name}
+                            track_name = {data.track_name}
+                            cover_url = {data.cover_url}
                         />
                         </div>
                     )}

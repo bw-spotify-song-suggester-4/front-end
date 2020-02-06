@@ -7,12 +7,13 @@ function TestSuggestedCard (props){
         
         
             <Card>
-                {props.title} 
+                {props.cover_url}
+                {props.track_name} 
                     <CardContent> 
-                        {props.artist}
+                        {props.artist_name}
                         </CardContent>
                         <CardContent>
-                         {props.song_id}
+                         {props.track_id}
                     </CardContent> 
                                 
             </Card>
