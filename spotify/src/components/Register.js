@@ -64,6 +64,7 @@ const Register = props => {
         <h5>Enter your password: </h5>
           <input className='inputContainer'
             type="password"
+            minLength='6 required'
             name="password"
 
             onChange={handleChange}

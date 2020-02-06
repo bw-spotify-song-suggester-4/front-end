@@ -15,7 +15,7 @@ const NavMenu = props => {
       <header className="nav_bar">
         <label className="menu-icon" htmlFor="menu-btn">
           <div className="logo">
-            <a
+            <a className='anchor'
             rel="noopener noreferrer"
               href="https://symphinity-songsuggester.netlify.com/"
             >
