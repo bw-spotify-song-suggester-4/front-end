@@ -20,11 +20,12 @@ function FavoriteList(){
             
                 {songs.map((data)=>{
                     return(
-                        <div id={data.id}> 
+                        <div id={data.track_id}> 
                         <FavoriteCard  
-                            id={data.id}
-                            artist = {data.artist}
-                            title = {data.title}
+                            id={data.track_id}
+                            artist = {data.artist_name}
+                            title = {data.track_name}
+                            cover_url= {data.cover_url}
                         />
                         </div>
                     )}
