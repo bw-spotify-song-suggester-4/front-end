@@ -41,7 +41,6 @@ const Register = props => {
           <input className='inputContainer'
             type="text"
             name="name"
-            
             required
             onChange={handleChange}
             value={user.name}
