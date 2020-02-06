@@ -4,7 +4,8 @@ const initialState = {
   credentials: null,
   isFetching: false,
   error: "",
-  isLoggedIn: false
+  isLoggedIn: false,
+  user_id: undefined
 };
 
 export const loginReducer = (state = initialState, action) => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const POST_SEND = "POST_SEND";
+export const SONG_SEND = "POST_SEND";
 export const RESULTS_FETCH = "RESULTS_FETCH";
 export const RESULTS_SUCCESS = "RESULTS_SUCCESS";
 export const RESULTS_FAILED = "RESULTS_FAILED";

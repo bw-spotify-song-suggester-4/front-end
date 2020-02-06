@@ -7,6 +7,7 @@ import TestResultCard from "./TestResultCard";
 import { saveResults } from "../actions/postFormActions";
 import axiosWithAuth from "../utils/axiosWithAuth";
 
+
 const useStyles = makeStyles(theme => ({
   text: {
     fontSize: 15,
@@ -30,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const SongForm = props => {
+const TestSongForm = props => {
   console.log("this is the results", props.results);
   const [song, setSong] = useState({ title: "" });
 
@@ -80,8 +81,9 @@ const mapStateToProps = state => {
   console.log("in post form", state);
   console.log("in post form", state.songReducer);
   return {
-    results: state.songReducer.results
+    results: state.songReducer.results,
+    
   };
 };
 
-export default connect(mapStateToProps, { saveResults })(SongForm);
+export default connect(mapStateToProps, { saveResults })(TestSongForm);
