@@ -34,6 +34,9 @@ const NavMenu = props => {
           <li className="link">
             <NavLink  to="/search">Search</NavLink>
           </li> 
+          <li className="link">
+            <NavLink  to="/testsearch">TestSearch</NavLink>
+          </li> 
           {/* TODO Need to get endpoint to Marketing page */}
           <li className="link">
             <NavLink  to="/" onClick={logOut}>

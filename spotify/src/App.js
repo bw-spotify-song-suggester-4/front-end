@@ -17,6 +17,8 @@ function App() {
         <Switch>
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute exact path="/search" component={Search} />
+          <PrivateRoute exact path="/testsearch" component={TestSearch} />
+          <PrivateRoute path="/results" component={ResultCard}/>
           {/* <PrivateRoute exact path="/editfavorites/:id" component={EditFavorites} /> */}
           <Route path="/login" component={Login} />
           <Route path="/" component={Register} />

@@ -33,11 +33,4 @@ const Search = props => {
 };
 export default Search;
 
-{
-  /* <SuggestedCard  
-                            name = {data.name}
-                            url= {data.url}
-                            description= {data.description}
-                            subscribers= {data.subscribers} */
-}
-// />
+
