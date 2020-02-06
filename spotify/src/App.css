@@ -1,11 +1,8 @@
 .App {
   text-align: center;
-  
+
   /* border: red 1px solid; */
-  
 }
-
-
 
 .App-header {
   background-color: #282c34;
@@ -21,7 +18,6 @@
 .App-link {
   color: #61dafb;
 }
-
 
 .register {
   color: hotpink;
@@ -80,6 +76,7 @@ bottom: 10.71%; */
 }
 
 .logo {
+  border: 2px solid green;
   display: table;
   margin: 0 auto;
   font-weight: 400;
@@ -120,25 +117,43 @@ bottom: 10.71%; */
   color: #ffffff;
   text-decoration: none;
 }
-.fav-button{
+.fav-button {
   height: 50px;
-  width: 250px;
+  width: 150px;
 
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgba(239, 1, 159, 0.75);
-  font-weight: 800;
-  color: #fff;
-  border-radius: 30%;
-  
+  box-shadow: 0px 10px 14px -7px #fbafe3;
+  background: linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+  background-color: #ff5bb0;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 13px 11px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #c70067;
 }
-.buttons{
+
+.fav-button:hover {
+  background: linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+  background-color: #ef027d;
+}
+
+.fav-button:active {
+  position: relative;
+  top: 1px;
+}
+
+.buttons {
   display: flex;
   justify-content: space-evenly;
   font-size: 15px;
-  
 }
-.favorites{
+.favorites {
   display: table;
   margin: 0 auto;
   font-weight: 400;
@@ -155,8 +170,8 @@ bottom: 10.71%; */
   -webkit-text-fill-color: transparent;
   line-height: 200px;
 }
-.playlist{
-  color: #FFFFFF;
+.playlist {
+  color: #ffffff;
   margin-left: 200px;
   width: 75%;
 }
@@ -164,3 +179,21 @@ bottom: 10.71%; */
 table .th {
   color: #fff;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+  
+}
+
+.search-form {
+  color: cyan;
+  font-size: 1.5rem;
+}
+
+input[type=text]:focus {
+  background-color: pink;
+  color: green;
+}
+

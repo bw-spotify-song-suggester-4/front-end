@@ -1,11 +1,11 @@
 import React from 'react'
-import SuggestedList from "./SuggestedList";
-import TestPostForm from './TestPostForm';
+import TestSuggestedList from "./TestSuggestedList";
+import TestSongForm from './TestSongForm';
 
 const TestSearch = () => {
     return(
         <div className="dashboard">
-            <TestPostForm />        
+            <TestSongForm />        
             <TestSuggestedList />
         </div>
     )

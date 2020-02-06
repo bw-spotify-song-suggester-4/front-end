@@ -13,33 +13,30 @@ const NavMenu = props => {
     // We're logged in
     return (
       <header className="nav_bar">
-      
         <label className="menu-icon" htmlFor="menu-btn">
           <div className="logo">
-          <h1>Symphinity</h1>
+            <a
+            rel="noopener noreferrer"
+              href="https://symphinity-songsuggester.netlify.com/"
+            >
+              Symphinity
+            </a>
           </div>
         </label>
         <ul className="menu">
-         
-          
-            
           <li className="link">
-            <NavLink  to="/">Home</NavLink>
-          </li> 
+            <NavLink to="/dashboard">Dashboard</NavLink>
+          </li>
           <li className="link">
-          <NavLink  to="/dashboard" >
-          Dashboard
-        </NavLink>
-        </li >
-          <li className="link">
-            <NavLink  to="/search">Search</NavLink>
+           <NavLink  to="/search">Search</NavLink>
           </li> 
           <li className="link">
             <NavLink  to="/testsearch">TestSearch</NavLink>
           </li> 
+
           {/* TODO Need to get endpoint to Marketing page */}
           <li className="link">
-            <NavLink  to="/" onClick={logOut}>
+            <NavLink to="/" onClick={logOut}>
               Logout
             </NavLink>
           </li>
@@ -51,20 +48,12 @@ const NavMenu = props => {
     // STRETCH: Add page to "Get Involved"
     return (
       <header className="header">
-        <NavLink to="/" className="logo">
+        <a className="logo"
+          rel="noopener noreferrer"
+          href="https://symphinity-songsuggester.netlify.com/"
+        >
           Symphinity
-        </NavLink>
-        <label className="menu-icon" htmlFor="menu-btn">
-          <span className="nav-icon"></span>
-        </label>
-        <ul className="menu">
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/login">Login</NavLink>
-          </li>
-        </ul>
+        </a>
       </header>
     );
   }
