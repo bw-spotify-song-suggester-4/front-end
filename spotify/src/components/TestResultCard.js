@@ -36,18 +36,22 @@ export function TestResultCard(props) {
     //user_id is hard coded right now. Need to fix a redux store issue where the user id is not being updated with the one given upon login
     const resultInfo = {
       user_id: localStorage.getItem("user_id"),
-      song_id: props.song.song_id,
-      artist: props.song.artist,
-      title: props.song.title,
-      first: props.results[0].song_id,
-      first_artist: props.results[0].artist,
-      first_title: props.results[0].title,
-      second: props.results[1].song_id,
-      second_artist: props.results[1].artist,
-      second_title: props.results[1].title,
-      third: props.results[2].song_id,
-      third_artist: props.results[2].artist,
-      third_title: props.results[2].title
+      track_id: props.song.track_id,
+      artist_name: props.song.artist_name,
+      cover_art: props.song.cover_art,
+      track_name: props.song.track_name,
+      first: props.results[0].track_id,
+      first_artist_name: props.results[0].artist_name,
+      first_track_name: props.results[0].track_name,
+      first_cover_art: props.results[0].cover_art,
+      second: props.results[1].track_id,
+      second_artist_name: props.results[1].artist_name,
+      second_track_name: props.results[1].track_name,
+      second_cover_art: props.results[1].cover_art,
+      third: props.results[2].track_id,
+      third_artist_name: props.results[2].artist_name,
+      third_track_name: props.results[2].track_name,
+      third_cover_art: props.results[2].cover_art, 
     };
     console.log("backend submit", resultInfo);
     props.saveResults(resultInfo);
@@ -55,16 +59,20 @@ export function TestResultCard(props) {
 
   return (
     <Card className={classes.card} flexDirection="row">
-      <button onClick={backendSubmit}>Save</button>
-      <h1 className={classes.titletext}>Song Title:{props.post.title}</h1>
+      <button onClick={backendSubmit}>Add to Favorites</button>
+      <h1 className={classes.titletext}>Song Title:{props.post.track_name}</h1>
       <br />
       <br />
       {props.results.map(result => {
         return (
           <Card border={5} className={classes.results}>
-            <h1> {result.song_id} </h1>
-            <h3>{result.artist}</h3>
-            <h3> {result.title}</h3>
+            
+           
+            <h1> {result.track_id} </h1>
+            <h2>{result.cover_url}</h2>
+            <h3>{result.artist_name}</h3>
+            <h3> {result.track_name}</h3>
+
             {/* TODO Add cardbody/image cap */}
           </Card>
         );
