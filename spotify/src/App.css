@@ -26,6 +26,8 @@
   margin-right: 20%;
   padding: 5%;
   border-radius: 12px;
+  
+  
 }
 
 .inputContainer {
@@ -76,7 +78,9 @@ bottom: 10.71%; */
 }
 
 .logo {
-  border: 2px solid green;
+  /* border: 2px solid green; */
+  padding: 0%;
+  width: 0%;
   display: table;
   margin: 0 auto;
   font-weight: 400;
@@ -91,24 +95,29 @@ bottom: 10.71%; */
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 200px;
+  /* line-height: 200px; */
 }
 
 .nav_bar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  /* justify-content: center; */
   height: 100px;
+  width: 100%;
 }
 
 .menu {
   display: flex;
+  justify-content: space-evenly;
+  margin-right: 2%;
 }
 
 .link {
   list-style: none;
   padding-left: 4%;
   padding-top: 5.6%;
+  width: 100%;
 }
 .active {
   color: rgba(239, 1, 159, 0.75);
