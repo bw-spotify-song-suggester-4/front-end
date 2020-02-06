@@ -43,7 +43,7 @@ export const saveResults = (data) => dispatch => {
                 authorization: localStorage.getItem("token")
             }
         })
-        .post("", data)
+        .post("/save", data)
         .then(response => {
             console.log("saveResults", response)
         })

@@ -32,6 +32,7 @@ export function TestResultCard(props) {
 
   const backendSubmit = event => {
     event.preventDefault();
+    //TODO add backendsubmit to a handlesumbit button that says "add to favorites"
     //user_id is hard coded right now. Need to fix a redux store issue where the user id is not being updated with the one given upon login
     const resultInfo = {
       user_id: localStorage.getItem("user_id"),
