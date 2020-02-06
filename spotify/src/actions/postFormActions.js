@@ -14,7 +14,7 @@ export const RESULTS_FAILED = "RESULTS_FAILED";
 //     type: RESULTS_FETCH,
 // })
 
-// export const resultsSucess = (results) => ({
+// export const resultsSuccess = (results) => ({
 //     type: RESULTS_SUCCESS,
 //     payload: results
 // })
