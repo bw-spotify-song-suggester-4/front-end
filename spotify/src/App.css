@@ -190,11 +190,14 @@ bottom: 10.71%; */
   -webkit-text-fill-color: transparent;
   line-height: 200px;
 }
+
 .playlist {
   color: #ffffff;
   margin-left: 200px;
   width: 75%;
 }
+
+
 
 table .th {
   color: #fff;

@@ -15,8 +15,9 @@ const NavMenu = props => {
       <header className="nav_bar">
         <label className="menu-icon" htmlFor="menu-btn">
           <div className="logo">
-            <a className='anchor'
-            rel="noopener noreferrer"
+            <a
+              className="anchor"
+              rel="noopener noreferrer"
               href="https://symphinity-songsuggester.netlify.com/"
             >
               Symphinity
@@ -28,17 +29,21 @@ const NavMenu = props => {
             <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
           <li className="link">
-           <NavLink  to="/search">Search</NavLink>
-          </li> 
+            <NavLink to="/search">Search</NavLink>
+          </li>
           <li className="link">
-            <NavLink  to="/testsearch">TestSearch</NavLink>
-          </li> 
+            <NavLink to="/testsearch">TestSearch</NavLink>
+          </li>
 
           {/* TODO Need to get endpoint to Marketing page */}
           <li className="link">
-            <NavLink to="/" onClick={logOut}>
+            <a
+              className="anchor"
+              rel="noopener noreferrer"
+              href="https://symphinity-songsuggester.netlify.com/"
+            >
               Logout
-            </NavLink>
+            </a>
           </li>
         </ul>
       </header>

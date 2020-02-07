@@ -13,11 +13,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer,
-    composeEnhancers(applyMiddleware(thunk))
+const store = createStore(allReducers,
+    composeEnhancers(applyMiddleware(thunk, logger))
 )
 
-console.log(rootReducer);
+console.log("all", allReducers);
 
 ReactDOM.render(
     <Provider store={store}>

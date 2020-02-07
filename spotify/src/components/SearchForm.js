@@ -5,15 +5,14 @@ import axios from "axios";
 import Search from "../components/Search";
 
 export default function SearchForm(props) {
-  // console.log("hello", props);
   console.log("props", props);
 
   const submitHandler = e => {
     e.preventDefault();
 
-    // TODO: Add API Request here - must run in `useEffect`
+    // TODO: Add API Request here
     axiosWithAuth()
-      .get(`/music/search/${props.search.title}`)
+      .post(`/music/search/${props.search.title}`, props.search.title)
       .then(response => {
         console.log("response", response, props.search.title);
 

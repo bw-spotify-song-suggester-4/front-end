@@ -44,7 +44,7 @@ const TestSongForm = props => {
   const handleSubmit = event => {
     event.preventDefault();
     axiosWithAuth()
-      .post(`/music/search/${song}`)
+      .post(`/music/search/${song}`, song)
       .then(response => {
         console.log("response", response, props.search.title);
         console.log("post", song, response.data);
