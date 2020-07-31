@@ -1,3 +1,3 @@
 # front-end
 
-url for deployed React app: bwsong.now.sh
+url for deployed React app: https://symphinity-songsuggester.netlify.app/
